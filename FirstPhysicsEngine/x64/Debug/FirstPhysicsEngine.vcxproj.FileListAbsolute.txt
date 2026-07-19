@@ -1,0 +1,9 @@
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-graphics-d-3.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-window-d-3.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-system-d-3.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\freetyped.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\zd.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\bz2d.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\libpng16d.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\brotlidec.dll
+C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\brotlicommon.dll
