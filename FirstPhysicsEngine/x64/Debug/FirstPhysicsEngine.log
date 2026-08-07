@@ -1,11 +1,6 @@
 ﻿  main.cpp
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(12,22): warning C4834: discarding return value of function with [[nodiscard]] attribute
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(13,47): warning C4305: 'argument': truncation from '__int64' to 'unsigned int'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(13,47): warning C4309: 'argument': truncation of constant value
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(31,26): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(32,27): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(33,26): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(34,27): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(35,25): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(36,20): warning C4305: 'argument': truncation from 'double' to 'float'
   FirstPhysicsEngine.vcxproj -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe
   C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe: message: deploying dependencies
   C:\Users\tay90\vcpkg\installed\x64-windows\debug\bin\sfml-graphics-d-3.dll -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-graphics-d-3.dll skipped, up to date

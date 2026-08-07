@@ -177,17 +177,27 @@ void Circle::changeColor(sf::Color color) {
 	circle.setFillColor(color);
 }
 
-Rectangle::Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass)
-	: Body(posX, posY, veloX, veloY, Mass), length(length), width(width)
+Rectangle::Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass, sf::Angle angle, float omega, float alpha)
+	: Body(posX, posY, veloX, veloY, Mass), length(length), width(width), angle(angle), omega(omega), alpha(alpha)
 {
 	setSize(length, width);
 	rectangle.setOrigin({ length / 2.0f, width / 2.0f });
 }
 void Rectangle::refresh() {
 	rectangle.setPosition(getPosition());
+	rectangle.setRotation(angle);
 }
 void Rectangle::draw(sf::RenderWindow& window) {
 	window.draw(rectangle);
+}
+void Rectangle::applyTorque(float appliedTorque) {
+	torque += appliedTorque;
+}
+void Rectangle::updateRotation(float dt) {
+	alpha = torque / momentInertia;
+	omega += alpha * dt;
+	angle += sf::degrees(omega * dt);
+	torque = 0;
 }
 void Rectangle::setSize(float length, float width) {
 	rectangle.setSize({ length, width });
@@ -204,9 +214,8 @@ void Rectangle::conservationWalls() {
 		setVelocityX(-(getVelocity().x));
 	}
 }
-void Rectangle::rotateRectangle(float degrees) {
-	angle = degrees;
-	rectangle.rotate(sf::degrees(degrees));
+void Rectangle::rectangleCollisionWithRectangle(Rectangle& otherRect) {
+
 }
 
 Gravity::Gravity() {}

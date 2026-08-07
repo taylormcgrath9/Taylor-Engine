@@ -48,15 +48,22 @@ private:
 	sf::RectangleShape rectangle;
 	float length;
 	float width;
-	float angle;
+	sf::Angle angle;
+	float omega;
+	float alpha;
+	float torque;
+	float momentInertia;
 public:
-	Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass);
+	Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass, sf::Angle angle, float omega, float alpha);
 	void refresh() override;
 	void draw(sf::RenderWindow& window);
 	void setSize(float length, float width);
+	void applyTorque(float appliedTorque);
+	void updateRotation(float dt);
 	sf::Vector2f getSize() const;
 	void conservationWalls() override;
-	void rotateRectangle(float degrees);
+	void rectangleCollisionWithRectangle(Rectangle& otherRect);
+	
 };
 
 class Force {
