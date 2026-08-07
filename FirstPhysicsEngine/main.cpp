@@ -11,7 +11,7 @@ int main()
 	//sf::Font font;
 //	font.openFromFile("arial.ttf");
 	sf::Angle Angle = sf::degrees(45);
-	Rectangle rect(300, 300, 0, 0, 50, 30, 60, Angle, -10, 0);
+	Rectangle rect(300, 300, 0, 0, 50, 30, 60, Angle, -25, 0);
 	Gravity gravity;
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Taylor Engine");
 
