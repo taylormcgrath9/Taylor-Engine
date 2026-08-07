@@ -1,6 +1,23 @@
-﻿  main.cpp
+﻿  Engine.cpp
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(60,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(118,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(119,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(120,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(121,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(125,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(126,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(127,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(128,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(152,22): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(152,18): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(166,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(167,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(168,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(169,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  main.cpp
 C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(35,25): warning C4305: 'argument': truncation from 'double' to 'float'
 C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(36,20): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
   FirstPhysicsEngine.vcxproj -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe
   C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe: message: deploying dependencies
   C:\Users\tay90\vcpkg\installed\x64-windows\debug\bin\sfml-graphics-d-3.dll -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-graphics-d-3.dll skipped, up to date
