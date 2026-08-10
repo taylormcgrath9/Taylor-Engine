@@ -31,6 +31,7 @@ public:
 };
 
 class Circle : public Body {
+
 private:
 	sf::CircleShape circle;
 public:
@@ -58,6 +59,7 @@ public:
 	void refresh() override;
 	void draw(sf::RenderWindow& window);
 	void setSize(float length, float width);
+	float getAngle() const;
 	void applyTorque(float appliedTorque);
 	void updateRotation(float dt);
 	sf::Vector2f getSize() const;
@@ -90,3 +92,5 @@ public:
 	Friction(float mewk, float mews);
 	float computeFriction(const Body& other);
 };
+sf::Vector2f rotatePoint(sf::Vector2f point, float radians);
+sf::Vector2f RotateAroundCenter(sf::Vector2f point, sf::Vector2f center, float radians);

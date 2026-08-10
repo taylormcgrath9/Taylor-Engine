@@ -2,6 +2,7 @@
 #include <iostream>
 #include "declarations.h"
 #include <cmath>
+#include <algorithm>
 
 
 Friction::Friction(float mewk, float mews) : mewk(mewk), mews(mews) {}
@@ -214,7 +215,70 @@ void Rectangle::conservationWalls() {
 		setVelocityX(-(getVelocity().x));
 	}
 }
+sf::Vector2f RotateAroundCenter(sf::Vector2f point, sf::Vector2f center, float radians) {
+	point -= center;
+	point = rotatePoint(point, radians);
+	point += center;
+	return point;
+}
+sf::Vector2f rotatePoint(sf::Vector2f point, float radians) {
+	return { point.x * std::cos(radians) - point.y * std::sin(radians), point.x * std::sin(radians) + point.y * std::cos(radians) };
+}
 void Rectangle::rectangleCollisionWithRectangle(Rectangle& otherRect) {
+	// separation axis theorem condition
+	sf::Vector2f otherLeftTop = RotateAroundCenter({ otherRect.getPosition().x - otherRect.getSize().x / 2.0f, otherRect.getPosition().y - otherRect.getSize().y / 2.0f }, otherRect.getPosition(), otherRect.getAngle());
+	sf::Vector2f otherRightTop = RotateAroundCenter({ otherRect.getPosition().x + otherRect.getSize().x / 2.0f, otherRect.getPosition().y - otherRect.getSize().y / 2.0f }, otherRect.getPosition(), otherRect.getAngle());
+	sf::Vector2f otherRightBottom = RotateAroundCenter({ otherRect.getPosition().x + otherRect.getSize().x / 2.0f, otherRect.getPosition().y + otherRect.getSize().y / 2.0f }, otherRect.getPosition(), otherRect.getAngle());
+	sf::Vector2f otherLeftBottom = RotateAroundCenter({ otherRect.getPosition().x - otherRect.getSize().x / 2.0f, otherRect.getPosition().y + otherRect.getSize().y / 2.0f }, otherRect.getPosition(), otherRect.getAngle());
+
+	sf::Vector2f leftTop = RotateAroundCenter({ getPosition().x - getSize().x / 2.0f, getPosition().y - getSize().y / 2.0f }, getPosition(), getAngle());
+	sf::Vector2f rightTop = RotateAroundCenter({ getPosition().x + getSize().x / 2.0f, getPosition().y - getSize().y / 2.0f }, getPosition(), getAngle());
+	sf::Vector2f rightBottom = RotateAroundCenter({ getPosition().x + getSize().x / 2.0f, getPosition().y + getSize().y / 2.0f }, getPosition(), getAngle());
+	sf::Vector2f leftBottom = RotateAroundCenter({ getPosition().x - getSize().x / 2.0f, getPosition().y + getSize().y / 2.0f }, getPosition(), getAngle());
+
+	float axisAngleThisOne = std::atan2((double)(rightTop.y - leftTop.y), (double)(rightTop.x - leftTop.x)); //vector pointing across top face
+	float axisAngleThisTwo = std::atan2(rightBottom.y - rightTop.y, rightBottom.x - rightTop.x); //vector pointing down rigt face
+	float axisAngleOtherOne = std::atan2((double)(otherRightTop.y - otherLeftTop.y), (double)(otherRightTop.x - otherLeftTop.x)); //same for others
+	float axisAngleOtherTwo = std::atan2(otherRightBottom.y - otherRightTop.y, otherRightBottom.x - otherRightTop.x);
+	std::vector<float> axes = { axisAngleThisOne, axisAngleThisTwo, axisAngleOtherOne, axisAngleOtherTwo };
+	for (int i = 0; i < 4; i++) { // check all axes for overlapping intervals
+		float currentAngle = axes[i];
+		float trTheta = 3.14159 / 2.0f - currentAngle - std::atan2(rightTop.x, rightTop.y); //angle bewteen 0,0 corner vector and projection axis
+		float projectedTRPosition = std::sqrt(rightTop.x * rightTop.x + rightTop.y * rightTop.y) * std::cos(trTheta); //how much origin to point points in dir of projection axis (scalar projection)
+
+		float tlTheta = 3.14159 / 2.0f - currentAngle - std::atan2(leftTop.x, leftTop.y); //same for different corners
+		float projectedTLPosition = std::sqrt(leftTop.x * leftTop.x + leftTop.y * leftTop.y) * std::cos(tlTheta);
+
+		float brTheta = 3.14159 / 2.0f - currentAngle - std::atan2(rightBottom.x, rightBottom.y);
+		float projectedBRPosition = std::sqrt(rightBottom.x * rightBottom.x + rightBottom.y * rightBottom.y) * std::cos(brTheta);
+
+		float blTheta = 3.14159 / 2.0f - currentAngle - std::atan2(leftBottom.x, leftBottom.y);
+		float projectedBLPosition = std::sqrt(leftBottom.x * leftBottom.x + leftBottom.y * leftBottom.y) * std::cos(blTheta);
+
+		float otherTrTheta = 3.14159 / 2.0f - currentAngle - std::atan2(otherRightTop.x, otherRightTop.y);
+		float otherProjectedTRPosition = std::sqrt(otherRightTop.x * otherRightTop.x + otherRightTop.y * otherRightTop.y) * std::cos(otherTrTheta);
+
+		float otherTlTheta = 3.14159 / 2.0f - currentAngle - std::atan2(otherLeftTop.x, otherLeftTop.y);
+		float otherProjectedTLPosition = std::sqrt(otherLeftTop.x * otherLeftTop.x + otherLeftTop.y * otherLeftTop.y) * std::cos(otherTlTheta);
+
+		float otherBrTheta = 3.14159 / 2.0f - currentAngle - std::atan2(otherRightBottom.x, otherRightBottom.y);
+		float otherProjectedBRPosition = std::sqrt(otherRightBottom.x * otherRightBottom.x + otherRightBottom.y * otherRightBottom.y) * std::cos(otherBrTheta);
+
+		float otherBlTheta = 3.14159 / 2.0f - currentAngle - std::atan2(otherLeftBottom.x, otherLeftBottom.y);
+		float otherProjectedBLPosition = std::sqrt(otherLeftBottom.x * otherLeftBottom.x + otherLeftBottom.y * otherLeftBottom.y) * std::cos(otherBlTheta);
+		
+		if (std::max({ projectedTRPosition, projectedTLPosition, projectedBRPosition, projectedBLPosition }) < std::min({ otherProjectedTRPosition, otherProjectedTLPosition, otherProjectedBRPosition, otherProjectedBLPosition })
+			|| std::max({ otherProjectedTRPosition, otherProjectedTLPosition, otherProjectedBRPosition, otherProjectedBLPosition }) < std::min({ projectedTRPosition, projectedTLPosition, projectedBRPosition, projectedBLPosition })) {
+		//no overlap between intervals
+			return;
+		}
+	}
+	//separate back and apply collision physics
+
+
+}
+float Rectangle::getAngle() const {
+	return angle.asRadians();
 
 }
 

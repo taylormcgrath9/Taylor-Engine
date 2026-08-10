@@ -11,7 +11,8 @@ int main()
 	//sf::Font font;
 //	font.openFromFile("arial.ttf");
 	sf::Angle Angle = sf::degrees(45);
-	Rectangle rect(300, 300, 0, 0, 50, 30, 60, Angle, -25, 0);
+	Rectangle rect(300, 300, 30, 0, 50, 80, 100, Angle, -25, 0);
+	Rectangle rect2(800, 500, 0, 0, 50, 50, 60, Angle, 30, 0);
 	Gravity gravity;
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Taylor Engine");
 
@@ -34,19 +35,27 @@ int main()
 		rect.applyForce(gravity.getForce(rect.getMass()));
 		rect.updateRotation(1 / 60.0);
 		rect.updateAll(1 / 60.0);
+		rect2.applyForce(gravity.getForce(rect2.getMass()));
+		rect2.updateRotation(1 / 60.0);
+		rect2.updateAll(1 / 60.0);
 		//ball2.updateAll(1 / 60.0);
 	//	ball.conservationWalls();
 	//	ball2.conservationWalls();
-		rect.conservationWalls();
+		rect.conservationWalls();	
+		rect2.conservationWalls();
+		rect.rectangleCollisionWithRectangle(rect2);
 	//	ball.circleCollisionRectangle(rect);
 	//	ball.circleCollisionCircle(ball2);
 		//ball2.circleCollisionRectangle(rect);
 		//ball.refresh();
 		rect.refresh();
+		rect2.refresh();
 	//	ball2.refresh();
 		window.clear();
+		
 	//	ball.draw(window);
 		rect.draw(window);
+		rect2.draw(window);
 		//ball2.draw(window);
 		//window.draw(text);
 		//window.draw(text2);
