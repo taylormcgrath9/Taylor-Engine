@@ -10,9 +10,9 @@ int main()
 	//ball.changeColor(sf::Color::Blue);
 	//sf::Font font;
 //	font.openFromFile("arial.ttf");
-	sf::Angle Angle = sf::degrees(45);
-	Rectangle rect(300, 300, 30, 0, 50, 80, 100, Angle, -25, 0);
-	Rectangle rect2(800, 500, 0, 0, 50, 50, 60, Angle, 30, 0);
+	sf::Angle Angle = sf::radians(0);
+	Rectangle rect(300, 300, -30, 0, 200, 30, 50, Angle, -.5);
+	Rectangle rect2(800, 500, 10, 0, 100, 60, 50, Angle,1);
 	Gravity gravity;
 	sf::RenderWindow window(sf::VideoMode({ 1920, 1080 }), "Taylor Engine");
 

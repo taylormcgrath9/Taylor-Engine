@@ -55,7 +55,7 @@ private:
 	float torque;
 	float momentInertia;
 public:
-	Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass, sf::Angle angle, float omega, float alpha);
+	Rectangle(float posX, float posY, float veloX, float veloY, float length, float width, unsigned int Mass, sf::Angle angle, float omega);
 	void refresh() override;
 	void draw(sf::RenderWindow& window);
 	void setSize(float length, float width);
@@ -63,6 +63,9 @@ public:
 	void applyTorque(float appliedTorque);
 	void updateRotation(float dt);
 	sf::Vector2f getSize() const;
+	float getOmega() const;	
+	float getMoment() const;
+	void setOmega(float omega);
 	void conservationWalls() override;
 	void rectangleCollisionWithRectangle(Rectangle& otherRect);
 	
