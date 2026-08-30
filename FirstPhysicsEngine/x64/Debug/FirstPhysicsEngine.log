@@ -1,35 +1,23 @@
 ﻿  Engine.cpp
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(61,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(119,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(120,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(121,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(122,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(126,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(127,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(128,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(129,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(153,22): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(153,18): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(167,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(168,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(169,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(170,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(243,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(245,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(254,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(256,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(258,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(260,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(262,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(264,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(266,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(268,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  main.cpp
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(36,25): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(37,20): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(39,26): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\main.cpp(40,21): warning C4305: 'argument': truncation from 'double' to 'float'
-  Generating Code...
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(68,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(132,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(133,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(134,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(135,75): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(141,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(142,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(143,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(144,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(253,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(255,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(264,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(266,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(268,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(270,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(272,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(274,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(276,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\tay90\source\repos\FirstPhysicsEngine\FirstPhysicsEngine\Engine.cpp(278,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   FirstPhysicsEngine.vcxproj -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe
   C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\FirstPhysicsEngine.exe: message: deploying dependencies
   C:\Users\tay90\vcpkg\installed\x64-windows\debug\bin\sfml-graphics-d-3.dll -> C:\Users\tay90\source\repos\FirstPhysicsEngine\x64\Debug\sfml-graphics-d-3.dll skipped, up to date
